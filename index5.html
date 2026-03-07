@@ -161,7 +161,12 @@
   .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green));transform:scaleX(0);transform-origin:left;transition:var(--t)}
   .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:transparent}
   .service-card:hover::after{transform:scaleX(1)}
-  .service-icon{width:48px;height:48px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .service-icon{width:78px;height:78px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.service-icon img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+}  
   .service-icon svg{color:var(--green)}
   .service-name{font-family:var(--fd);font-size:1.08rem;font-weight:700;color:var(--green);margin-bottom:7px}
   .service-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.65}
@@ -537,15 +542,15 @@
       <h2 class="section-title" id="gastro-title">Gut &amp; Liver Specialist Services in Pune</h2>
       <p class="section-subtitle">Expert diagnosis and management of digestive, liver and pancreatic conditions by Dr. Vikas R. Bharti &mdash; a trained Interventional Endoscopist with DrNB (Gastro).</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-eye"/></svg></div><h3 class="service-name">Upper GI Endoscopy</h3><p class="service-desc">Diagnostic and therapeutic endoscopy for stomach, oesophageal and duodenal conditions including ulcers, polyps and bleeding disorders.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-activity"/></svg></div><h3 class="service-name">Colonoscopy</h3><p class="service-desc">Complete large intestine evaluation for colon cancer screening, polyp removal, rectal bleeding and inflammatory bowel disease diagnosis.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-zap"/></svg></div><h3 class="service-name">ERCP</h3><p class="service-desc">Endoscopic Retrograde Cholangiopancreatography for bile duct stones, strictures, biliary obstruction and pancreatic duct disorders.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-shield"/></svg></div><h3 class="service-name">GERD Treatment</h3><p class="service-desc">Comprehensive evaluation and management of gastroesophageal reflux disease, hiatal hernia and chronic heartburn conditions.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-clipboard"/></svg></div><h3 class="service-name">IBS &amp; IBD Care</h3><p class="service-desc">Expert treatment of Irritable Bowel Syndrome and Inflammatory Bowel Disease including Crohn's disease and Ulcerative Colitis.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-activity"/></svg></div><h3 class="service-name">Liver Disease</h3><p class="service-desc">Diagnosis and management of fatty liver, hepatitis, cirrhosis, jaundice and liver function disorders by an experienced Hepatologist.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-microscope"/></svg></div><h3 class="service-name">Pancreatic Disorders</h3><p class="service-desc">Management of acute and chronic pancreatitis, pancreatic cysts and enzyme deficiency with EUS-guided precision.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-shield"/></svg></div><h3 class="service-name">Gallbladder Diseases</h3><p class="service-desc">Evaluation and management of gallstones, cholecystitis, biliary dyskinesia and related conditions with modern endoscopic techniques.</p></div>
+ <div class="services-grid">
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Upper GI Endoscopy.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Upper GI Endoscopy</h3><p class="service-desc">Diagnostic and therapeutic endoscopy for stomach, oesophageal and duodenal conditions including ulcers, polyps and bleeding disorders.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Colonoscopy.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Colonoscopy</h3><p class="service-desc">Complete large intestine evaluation for colon cancer screening, polyp removal, rectal bleeding and inflammatory bowel disease diagnosis.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/ERCP.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">ERCP</h3><p class="service-desc">Endoscopic Retrograde Cholangiopancreatography for bile duct stones, strictures, biliary obstruction and pancreatic duct disorders.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/GERD-Treatment.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">GERD Treatment</h3><p class="service-desc">Comprehensive evaluation and management of gastroesophageal reflux disease, hiatal hernia and chronic heartburn conditions.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/IBS-and-IBD-treatment.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">IBS &amp; IBD Care</h3><p class="service-desc">Expert treatment of Irritable Bowel Syndrome and Inflammatory Bowel Disease including Crohn's disease and Ulcerative Colitis.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Liver-Diseases.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Liver Disease</h3><p class="service-desc">Diagnosis and management of fatty liver, hepatitis, cirrhosis, jaundice and liver function disorders by an experienced Hepatologist.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Pancreatic-Disorders.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Pancreatic Disorders</h3><p class="service-desc">Management of acute and chronic pancreatitis, pancreatic cysts and enzyme deficiency with EUS-guided precision.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Gall-Bladder-Disease.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Gallbladder Diseases</h3><p class="service-desc">Evaluation and management of gallstones, cholecystitis, biliary dyskinesia and related conditions with modern endoscopic techniques.</p></div>
     </div>
   </div>
 </section>
@@ -558,15 +563,15 @@
       <h2 class="section-title" id="gynec-title">Women's Health &amp; Maternity Services in Pune</h2>
       <p class="section-subtitle">From preconception planning to postmenopause care, Dr. Swarada J. Kulkarni provides compassionate, evidence-based women's healthcare with expertise in laparoscopic surgery and reproductive medicine.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-heart"/></svg></div><h3 class="service-name">Pregnancy Care</h3><p class="service-desc">Complete antenatal care, prenatal monitoring, normal and caesarean deliveries with mother and baby-centric birth planning.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-shield"/></svg></div><h3 class="service-name">High Risk Pregnancy</h3><p class="service-desc">Specialised management of hypertension, gestational diabetes, twins, preterm labour and other high-risk obstetric conditions.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-activity"/></svg></div><h3 class="service-name">PCOS Treatment</h3><p class="service-desc">Individualised treatment for Polycystic Ovarian Syndrome including hormonal management, lifestyle counselling and fertility support.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-users"/></svg></div><h3 class="service-name">Infertility Treatment</h3><p class="service-desc">Comprehensive infertility evaluation, ovulation induction, IUI and coordination of assisted reproductive techniques for both partners.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-calendar"/></svg></div><h3 class="service-name">Menstrual Disorders</h3><p class="service-desc">Diagnosis and treatment of irregular periods, heavy bleeding, endometriosis, fibroids and premenstrual syndrome.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-zap"/></svg></div><h3 class="service-name">Laparoscopic Surgery</h3><p class="service-desc">Minimally invasive procedures for ovarian cysts, fibroids, endometriosis, ectopic pregnancy and pelvic adhesions.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-leaf"/></svg></div><h3 class="service-name">Menopause Care</h3><p class="service-desc">Holistic management of perimenopause and menopause symptoms including hormone therapy, bone health and quality of life care.</p></div>
-      <div class="service-card fade-up"><div class="service-icon"><svg width="21" height="21"><use href="#ic-eye"/></svg></div><h3 class="service-name">Cervical Cancer Screening</h3><p class="service-desc">Pap smear, HPV testing, colposcopy and precancerous lesion management for early detection and prevention of cervical cancer.</p></div>
+     <div class="services-grid">
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Pregnancy-Care.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Pregnancy Care</h3><p class="service-desc">Complete antenatal care, prenatal monitoring, normal and caesarean deliveries with mother and baby-centric birth planning.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Laproscopic-Surgery.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Laparoscopic Surgery</h3><p class="service-desc">Minimally invasive procedures for ovarian cysts, fibroids, endometriosis, ectopic pregnancy and pelvic adhesions.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/PCOS-Treatment.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">PCOS Treatment</h3><p class="service-desc">Individualised treatment for Polycystic Ovarian Syndrome including hormonal management, lifestyle counselling and fertility support.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/High-Risk_Pregnancy.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">High Risk Pregnancy</h3><p class="service-desc">Specialised management of hypertension, gestational diabetes, twins, preterm labour and other high-risk obstetric conditions.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Infertility-Treatments.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Infertility Treatment</h3><p class="service-desc">Comprehensive infertility evaluation, ovulation induction, IUI and coordination of assisted reproductive techniques for both partners.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Menstrual-Disorders.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Menstrual Disorders</h3><p class="service-desc">Diagnosis and treatment of irregular periods, heavy bleeding, endometriosis, fibroids and premenstrual syndrome.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Menopause-care.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Menopause Care</h3><p class="service-desc">Holistic management of perimenopause and menopause symptoms including hormone therapy, bone health and quality of life care.</p></div>
+      <div class="service-card fade-up"><div class="service-icon"><img src="icons/Cervical-Cancer-Screening.svg" alt="Gall Bladder Disease Treatment Icon"></div><h3 class="service-name">Cervical Cancer Screening</h3><p class="service-desc">Pap smear, HPV testing, colposcopy and precancerous lesion management for early detection and prevention of cervical cancer.</p></div>
     </div>
   </div>
 </section>
@@ -726,7 +731,7 @@
         <a href="https://maps.google.com/?q=Kingston+Avenue+Pimple+Saudagar+Pune" target="_blank" rel="noopener noreferrer" class="btn btn-green" style="margin-top:6px"><svg width="14" height="14"><use href="#ic-directions"/></svg>Get Directions</a>
       </div>
       <div class="map-frame fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.5689!2d73.7763!3d18.6197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM3JzEwLjkiTiA3M8KwNDYnMzQuNyJF!5e0!3m2!1sen!2sin!4v1234567890" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Virtue Gastro &amp; Gynaec Clinic Location Map"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.44397457336!2d73.8014176!3d18.5963001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8e6df424429%3A0xef1a97fb254b958f!2sKingston%20Avenue!5e1!3m2!1sen!2sin!4v1772892941772!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Virtue Gastro &amp; Gynaec Clinic Location Map"></iframe>
       </div>
     </div>
   </div>
