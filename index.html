@@ -666,6 +666,25 @@ body.preloading { overflow: hidden; }
   .testi-text { font-size: 0.85rem; }
 }
 
+/* Paste inside your <style> tag */
+.created-by {
+  text-align: center;
+  padding: 12px 0 4px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  letter-spacing: 0.5px;
+}
+
+.created-by a {
+  color: rgba(255, 255, 255, 0.32);
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.created-by a:hover {
+  color: #d4a857;
+}
 
   </style>
 
@@ -1303,7 +1322,15 @@ body.preloading { overflow: hidden; }
       <div class="footer-disclaimer">The information on this website is for general awareness only and does not constitute medical advice. Always consult a qualified doctor for diagnosis and treatment.</div>
     </div>
   </div>
+
+<!-- Add inside footer, at the very bottom before </footer> -->
+<div class="created-by">
+  Created by <a href="#" target="_blank" rel="noopener">GrowInfinite</a>
+</div>
+
 </footer>
+
+
 
 <!-- FLOATING CALL (mobile) -->
 <a href="tel:+919137360272" class="float-call" aria-label="Call Virtue Gastro &amp; Gynaec Clinic">
