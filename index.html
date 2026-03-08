@@ -463,6 +463,209 @@ body.preloading { overflow: hidden; }
 @keyframes pre-bar-show { to { opacity: 1; } }
 @keyframes pre-bar-grow  { to { width: 100%; } }
 
+/* =============================================
+   TESTIMONIALS CSS
+   Paste inside your <style> tag
+============================================= */
+
+/* Outer clip */
+.testi-outer {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Scrolling track */
+.testi-track {
+  display: flex;
+  gap: 22px;
+  transition: transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Individual card */
+.testi-card {
+  background: #ffffff;
+  border: 1.5px solid #dde5de;
+  border-radius: 18px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-shrink: 0;
+  /* width set by JS based on viewport */
+  transition: box-shadow 0.28s ease, border-color 0.28s ease;
+  position: relative;
+}
+
+.testi-card:hover {
+  box-shadow: 0 8px 32px rgba(37, 67, 43, 0.10);
+  border-color: #d4a857;
+}
+
+/* Quote mark decoration */
+.testi-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: #eef5f0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Stars */
+.testi-stars {
+  display: flex;
+  gap: 3px;
+}
+
+/* Review text */
+.testi-text {
+  font-size: 0.9rem;
+  color: #5a6b5e;
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* Author row */
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #dde5de;
+  padding-top: 16px;
+}
+
+.testi-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eef5f0;
+  border: 2px solid #d4a857;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #25432B;
+  flex-shrink: 0;
+}
+
+.testi-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #25432B;
+}
+
+.testi-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: #5a6b5e;
+  margin-top: 2px;
+}
+
+.testi-location svg {
+  color: #B8860B;
+}
+
+/* Dept badge — pushed to right */
+.testi-dept {
+  margin-left: auto;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+.testi-dept.gastro {
+  background: #eef5f0;
+  color: #25432B;
+}
+
+.testi-dept.gynec {
+  background: #fdf8ee;
+  color: #B8860B;
+}
+
+/* Controls row */
+.testi-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.testi-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #dde5de;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #25432B;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.testi-btn:hover {
+  background: #25432B;
+  border-color: #25432B;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 67, 43, 0.2);
+}
+
+.testi-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Dots */
+.testi-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.testi-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #dde5de;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.testi-dot.active {
+  background: #25432B;
+  width: 22px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testi-card { padding: 22px 18px; }
+  .testi-card::before { font-size: 3.5rem; }
+  .testi-text { font-size: 0.85rem; }
+}
+
 
   </style>
 
@@ -728,7 +931,7 @@ body.preloading { overflow: hidden; }
     <div class="doctors-grid">
       <article class="doctor-card fade-up" itemscope itemtype="https://schema.org/Physician">
         <div class="doctor-img-wrap">
-          <img src="img/Dr. Vikas Bharti Gastroenterologist.jpg" alt="Dr. Vikas R. Bharti Gastroenterologist Pimple Saudagar Pune" width="500" height="280" onerror="this.style.display='none'" itemprop="image" />
+          <img src="img/Dr. Vikas Bharti Gastroenterologist Pune.jpg" alt="Dr. Vikas R. Bharti Gastroenterologist Pimple Saudagar Pune" width="500" height="280" onerror="this.style.display='none'" itemprop="image" />
           <!-- <div class="doctor-img-ph"><div class="doctor-ph-circle"><svg width="40" height="40"><use href="#ic-stethoscope"/></svg></div><span class="doctor-ph-label">Replace with doctor photo</span></div> -->
           <div class="doctor-dept-badge">Gastroenterology</div>
         </div>
@@ -768,6 +971,171 @@ body.preloading { overflow: hidden; }
     </div>
   </div>
 </section>
+
+<!-- =============================================
+     TESTIMONIALS SECTION
+     Paste wherever you want it in your page
+     (recommended: after #doctors, before #why)
+============================================= -->
+<section id="testimonials" class="section section-bg" aria-labelledby="testi-title">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:48px">
+      <div class="section-label">Patient Stories</div>
+      <h2 class="section-title" id="testi-title">What Our Patients Say</h2>
+      <p class="section-subtitle">Real experiences from patients across Pimple Saudagar, Wakad, Baner and Aundh who trust Virtue Clinic for their health.</p>
+    </div>
+
+    <!-- Carousel track -->
+    <div class="testi-outer">
+      <div class="testi-track" id="testiTrack">
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+          </div>
+          <p class="testi-text">"Dr. Vikas Bharti diagnosed my liver issue in just one visit after months of confusion elsewhere. His explanation was clear and the treatment worked. Very relieved to have found such a specialist so close to home."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RK</div>
+            <div>
+              <div class="testi-name">Rajesh K.</div>
+              <div class="testi-location">
+                <svg width="11" height="11"><use href="#ic-map-pin"/></svg> Wakad, Pune
+              </div>
+            </div>
+            <div class="testi-dept gastro">Gastroenterology</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+          </div>
+          <p class="testi-text">"Dr. Swarada Kulkarni handled my high-risk pregnancy with so much patience and care. She was always available for queries, never dismissive. My delivery went smoothly and I owe it entirely to her guidance."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">PM</div>
+            <div>
+              <div class="testi-name">Priya M.</div>
+              <div class="testi-location">
+                <svg width="11" height="11"><use href="#ic-map-pin"/></svg> Pimple Saudagar
+              </div>
+            </div>
+            <div class="testi-dept gynec">Gynecology</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+          </div>
+          <p class="testi-text">"Had a colonoscopy done by Dr. Bharti. The entire procedure was painless and well explained beforehand. The clinic is clean, well-maintained, and the staff is courteous. Highly recommend for anyone needing GI care."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SP</div>
+            <div>
+              <div class="testi-name">Suresh P.</div>
+              <div class="testi-location">
+                <svg width="11" height="11"><use href="#ic-map-pin"/></svg> Rahatani, Pune
+              </div>
+            </div>
+            <div class="testi-dept gastro">Gastroenterology</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+          </div>
+          <p class="testi-text">"Been struggling with PCOS for years. Dr. Swarada took time to understand my case, adjusted my treatment plan twice and the results have been remarkable. Finally feel like someone genuinely listened."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AS</div>
+            <div>
+              <div class="testi-name">Ananya S.</div>
+              <div class="testi-location">
+                <svg width="11" height="11"><use href="#ic-map-pin"/></svg> Baner, Pune
+              </div>
+            </div>
+            <div class="testi-dept gynec">Gynecology</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+          </div>
+          <p class="testi-text">"My father was diagnosed with fatty liver and Dr. Bharti managed the entire case brilliantly. Follow-up visits were easy to schedule and the doctor always remembered previous details. Exceptional care."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">NJ</div>
+            <div>
+              <div class="testi-name">Nikhil J.</div>
+              <div class="testi-location">
+                <svg width="11" height="11"><use href="#ic-map-pin"/></svg> Aundh, Pune
+              </div>
+            </div>
+            <div class="testi-dept gastro">Gastroenterology</div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+            <svg width="14" height="14"><use href="#ic-star"/></svg>
+          </div>
+          <p class="testi-text">"Dr. Swarada performed my laparoscopic surgery and the recovery was faster than I expected. She is knowledgeable, calm and reassuring throughout. The clinic feels warm and professional at the same time."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MR</div>
+            <div>
+              <div class="testi-name">Meera R.</div>
+              <div class="testi-location">
+                <svg width="11" height="11"><use href="#ic-map-pin"/></svg> Sangvi, Pune
+              </div>
+            </div>
+            <div class="testi-dept gynec">Gynecology</div>
+          </div>
+        </div>
+
+      </div><!-- /testi-track -->
+    </div><!-- /testi-outer -->
+
+    <!-- Controls -->
+    <div class="testi-controls">
+      <button class="testi-btn" id="testiBtnPrev" aria-label="Previous testimonial">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="testi-dots" id="testiDots"></div>
+      <button class="testi-btn" id="testiBtnNext" aria-label="Next testimonial">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Add this symbol to your existing SVG sprite (inside the <svg style="display:none"> block) -->
+<!-- <symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#C9961F" stroke="#C9961F" stroke-width="1"/></symbol> -->
+
 
 <!-- WHY CHOOSE US -->
 <section id="why" class="section section-green" aria-labelledby="why-title">
@@ -1008,6 +1376,158 @@ body.preloading { overflow: hidden; }
   document.querySelectorAll('.services-grid .service-card').forEach(function(c,i){c.style.transitionDelay=(i%4*72)+'ms'});
   var hdr=document.getElementById('header');
   window.addEventListener('scroll',function(){hdr.style.boxShadow=window.scrollY>40?'0 3px 20px rgba(37,67,43,0.1)':'0 2px 16px rgba(37,67,43,0.06)'},{passive:true});
+
+/* =============================================
+   TESTIMONIALS JS
+   Paste inside your <script> tag
+============================================= */
+
+(function () {
+  var track     = document.getElementById('testiTrack');
+  var dotsWrap  = document.getElementById('testiDots');
+  var btnPrev   = document.getElementById('testiBtnPrev');
+  var btnNext   = document.getElementById('testiBtnNext');
+
+  if (!track) return;
+
+  var cards     = Array.from(track.querySelectorAll('.testi-card'));
+  var total     = cards.length;
+  var current   = 0;
+  var perView   = 1;
+  var autoTimer = null;
+  var gap       = 22;
+
+  /* How many cards to show at once */
+  function getPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640)  return 2;
+    return 1;
+  }
+
+  /* Set card widths and move to current position */
+  function layout() {
+    perView = getPerView();
+    var outerW = track.parentElement.offsetWidth;
+    var cardW  = (outerW - gap * (perView - 1)) / perView;
+
+    cards.forEach(function (c) {
+      c.style.width    = cardW + 'px';
+      c.style.minWidth = cardW + 'px';
+    });
+
+    /* Clamp current so we never over-scroll */
+    var maxIndex = total - perView;
+    if (current > maxIndex) current = maxIndex;
+
+    moveTo(current, false);
+    buildDots();
+    updateButtons();
+  }
+
+  /* Slide the track */
+  function moveTo(index, animate) {
+    if (animate === false) {
+      track.style.transition = 'none';
+    } else {
+      track.style.transition = 'transform 0.52s cubic-bezier(0.4, 0, 0.2, 1)';
+    }
+
+    var outerW  = track.parentElement.offsetWidth;
+    var cardW   = (outerW - gap * (perView - 1)) / perView;
+    var offset  = index * (cardW + gap);
+
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    current = index;
+
+    /* Re-enable transition after forced snap */
+    if (animate === false) {
+      requestAnimationFrame(function () {
+        track.style.transition = 'transform 0.52s cubic-bezier(0.4, 0, 0.2, 1)';
+      });
+    }
+
+    updateDots();
+    updateButtons();
+  }
+
+  /* Dots */
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    var count = total - perView + 1;
+    for (var i = 0; i < count; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'testi-dot' + (i === current ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', (function (idx) {
+        return function () { stopAuto(); moveTo(idx, true); startAuto(); };
+      })(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    var dots = dotsWrap.querySelectorAll('.testi-dot');
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function updateButtons() {
+    btnPrev.disabled = current <= 0;
+    btnNext.disabled = current >= total - perView;
+  }
+
+  /* Button clicks */
+  btnPrev.addEventListener('click', function () {
+    if (current > 0) { stopAuto(); moveTo(current - 1, true); startAuto(); }
+  });
+
+  btnNext.addEventListener('click', function () {
+    if (current < total - perView) { stopAuto(); moveTo(current + 1, true); startAuto(); }
+  });
+
+  /* Auto-advance every 4 seconds */
+  function startAuto() {
+    autoTimer = setInterval(function () {
+      var next = current + 1;
+      if (next > total - perView) next = 0;
+      moveTo(next, true);
+    }, 4000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+  }
+
+  /* Touch / swipe support */
+  var touchStartX = 0;
+  track.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].clientX;
+    stopAuto();
+  }, { passive: true });
+
+  track.addEventListener('touchend', function (e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0 && current < total - perView) moveTo(current + 1, true);
+      if (diff < 0 && current > 0)               moveTo(current - 1, true);
+    }
+    startAuto();
+  }, { passive: true });
+
+  /* Pause auto on hover */
+  track.addEventListener('mouseenter', stopAuto);
+  track.addEventListener('mouseleave', startAuto);
+
+  /* Recalculate on resize */
+  window.addEventListener('resize', function () { layout(); }, { passive: true });
+
+  /* Init */
+  layout();
+  startAuto();
+})();
+
+
 </script>
 </body>
 </html>
