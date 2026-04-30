@@ -127,6 +127,23 @@
   .hero-right{display:flex;align-items:stretch}
   .hero-doctors-frame{position:relative;width:100%;border-radius:20px;overflow:hidden;border:1.5px solid var(--border);background:var(--green-light);aspect-ratio:3/4;display:flex;align-items:flex-end;box-shadow:var(--shadow-md)}
   .hero-doctors-frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .hero-doctors-frame img.hero-img-desktop {
+  display: block;
+}
+
+.hero-doctors-frame img.hero-img-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-doctors-frame img.hero-img-desktop {
+    display: none !important;
+  }
+
+  .hero-doctors-frame img.hero-img-mobile {
+    display: block !important;
+  }
+}
   .hero-frame-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;pointer-events:none}
   .hero-placeholder-icons{display:flex;gap:14px;align-items:center;justify-content:center}
   .pi-box{width:60px;height:60px;background:var(--white);border:2px solid var(--gold-border);border-radius:50%;display:flex;align-items:center;justify-content:center}
@@ -191,7 +208,7 @@
   .doctor-ph-circle{width:88px;height:88px;background:var(--white);border-radius:50%;border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center}
   .doctor-ph-circle svg{color:var(--green-mid)}
   .doctor-ph-label{font-size:11px;color:var(--text-muted);font-style:italic}
-  .doctor-dept-badge{position:absolute;top:14px;left:14px;background:var(--green);color:var(--white);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 13px;border-radius:50px}
+  .doctor-dept-badge{position:absolute;top:14px;right:14px;background:var(--green);color:var(--white);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 13px;border-radius:50px}
   .doctor-body{padding:24px 24px 20px}
   .doctor-name{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--green);margin-bottom:5px}
   .doctor-title{font-size:0.8rem;color:var(--gold);font-weight:600;margin-bottom:4px;line-height:1.55}
@@ -892,29 +909,10 @@ body.preloading { overflow: hidden; }
         </div>
       </div>
       <div class="hero-right">
-        <div class="hero-doctors-frame">
-          <img src="img/Website-Header.jpg" alt="Dr. Vikas R. Bharti and Dr. Swarada J. Kulkarni – Virtue Gastro &amp; Gynaec Clinic" onerror="this.style.display='none'" />
-          <div class="hero-frame-placeholder" aria-hidden="true">
-            <div class="hero-placeholder-icons">
-              <!-- <div class="pi-box"><svg width="26" height="26"><use href="#ic-stethoscope"/></svg></div> -->
-              <!-- <div class="pi-box"><svg width="26" height="26"><use href="#ic-heart"/></svg></div> -->
-            <!-- </div>
-            <div class="hero-placeholder-label">Insert combined doctors photo here</div>
-            <div class="hero-placeholder-hint">doctors-together.jpg</div>
-          </div> -->
-          <!-- <div class="hero-frame-caption">
-            <div class="hero-frame-doc">
-              <div class="hero-frame-doc-name">Dr. Vikas R. Bharti</div>
-              <div class="hero-frame-doc-spec">Gastroenterologist &amp; Hepatologist</div>
-            </div>
-            <div class="hero-frame-divider"></div>
-            <div class="hero-frame-doc">
-              <div class="hero-frame-doc-name">Dr. Swarada J. Kulkarni</div>
-              <div class="hero-frame-doc-spec">Gynecologist &amp; Infertility Specialist</div>
-            </div> -->
-          </div>
-        </div>
-      </div>
+<div class="hero-doctors-frame">
+  <img src="img/desktop-header.JPG" class="hero-img-desktop" alt="">
+  <img src="img/mobile-header.png" class="hero-img-mobile" alt="">
+</div>      </div>
     </div>
   </div>
 </section>
@@ -946,8 +944,8 @@ body.preloading { overflow: hidden; }
     <div class="about-grid">
       <div class="about-img-wrap fade-up">
         <div class="about-img">
-          <img src="clinic.jpg" alt="Virtue Gastro &amp; Gynaec Clinic interior, Pimple Saudagar" onerror="this.style.display='none'" />
-          <div class="about-img-ph"><svg width="52" height="52"><use href="#ic-building"/></svg><span>Clinic photo</span></div>
+          <img src="img/Clinic-Image.JPG" alt="Virtue Gastro &amp; Gynaec Clinic interior, Pimple Saudagar" onerror="this.style.display='none'" />
+          <!-- <div class="about-img-ph"><svg width="52" height="52"><use href="#ic-building"/></svg><span>Clinic photo</span></div> -->
         </div>
         <div class="about-badge"><div class="about-badge-num">2</div><div class="about-badge-label">Expert<br/>Specialists</div></div>
       </div>
@@ -1027,7 +1025,7 @@ body.preloading { overflow: hidden; }
     <div class="doctors-grid">
       <article class="doctor-card fade-up" itemscope itemtype="https://schema.org/Physician">
         <div class="doctor-img-wrap">
-          <img src="img/Dr. Vikas Bharti Gastroenterologist Pune.jpg" alt="Dr. Vikas R. Bharti Gastroenterologist Pimple Saudagar Pune" width="500" height="280" onerror="this.style.display='none'" itemprop="image" />
+          <img src="img/Dr Vikas Bharti Gastroenterologist.png" alt="Dr. Vikas R. Bharti Gastroenterologist Pimple Saudagar Pune" width="500" height="280" onerror="this.style.display='none'" itemprop="image" />
           <!-- <div class="doctor-img-ph"><div class="doctor-ph-circle"><svg width="40" height="40"><use href="#ic-stethoscope"/></svg></div><span class="doctor-ph-label">Replace with doctor photo</span></div> -->
           <div class="doctor-dept-badge">Gastroenterology</div>
         </div>
@@ -1046,7 +1044,7 @@ body.preloading { overflow: hidden; }
       </article>
       <article class="doctor-card fade-up" itemscope itemtype="https://schema.org/Physician">
         <div class="doctor-img-wrap">
-          <img src="img/Dr. Swarada Kulkarni Gynecologist.png" alt="Dr. Swarada J. Kulkarni Gynecologist Pimple Saudagar Pune" width="500" height="280" onerror="this.style.display='none'" itemprop="image" />
+          <img src="img/Dr Swarada Kulkarni Gynecologist.png" alt="Dr. Swarada J. Kulkarni Gynecologist Pimple Saudagar Pune" width="500" height="280" onerror="this.style.display='none'" itemprop="image" />
           <!-- <div class="doctor-img-ph"><div class="doctor-ph-circle"><svg width="40" height="40"><use href="#ic-heart"/></svg></div><span class="doctor-ph-label">Replace with doctor photo</span></div> -->
           <div class="doctor-dept-badge">Gynaecology</div>
         </div>
